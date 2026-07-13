@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>AI Tone Rephraser</title>
+
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#4338CA">
+
+<!-- iPhone home screen support -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Rephraser">
+<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+<link rel="icon" href="/icons/favicon-32.png">
+
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<div class="wrap">
+  <header class="header">
+    <div class="logo">✦ AI Tone Rephraser</div>
+    <div class="sub">Rewrite anything in the tone you need</div>
+  </header>
+
+  <main class="card">
+    <label class="label" for="input-text">Your text</label>
+    <textarea id="input-text" placeholder="Paste or type the text you want to rephrase..." maxlength="4000"></textarea>
+    <div class="char-count"><span id="char-count">0</span> / 4000</div>
+
+    <label class="label" for="tone-select">Tone</label>
+    <select id="tone-select">
+      <option value="professional">Professional</option>
+      <option value="casual">Casual</option>
+      <option value="friendly">Friendly</option>
+      <option value="formal">Formal</option>
+      <option value="confident">Confident</option>
+      <option value="empathetic">Empathetic</option>
+      <option value="assertive">Assertive</option>
+      <option value="concise">Concise</option>
+      <option value="enthusiastic">Enthusiastic</option>
+      <option value="diplomatic">Diplomatic</option>
+    </select>
+
+    <button id="rephrase-btn" class="btn-primary">Rephrase</button>
+    <div id="error" class="error"></div>
+
+    <div id="result-wrap" class="result-wrap" style="display:none">
+      <div class="result-header">
+        <span class="label" style="margin:0">Result</span>
+        <button id="copy-btn" class="btn-ghost">Copy</button>
+      </div>
+      <div id="result-text" class="result-text"></div>
+    </div>
+  </main>
+</div>
+
+<script src="/app.js"></script>
+</body>
+</html>
